@@ -58,6 +58,7 @@ cp -r "${GOPATH}"/pkg/mod/github.com/urfave/cli/v2@v2.25.0/autocomplete/zsh_auto
 	"${BASEDIR}"/_nordvpn_auto_complete
 
 # replace $PROG for nordvpn
+# shellcheck disable=SC2016 # We specifically don't want to expand $PROG
 sed -i 's/$PROG/nordvpn/g' "${BASEDIR}"/_nordvpn_auto_complete
 
 # pack
