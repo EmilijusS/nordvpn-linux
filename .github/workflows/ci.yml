@@ -24,9 +24,7 @@ jobs:
           url_base='https://github.com/koalaman/shellcheck/releases/download'; \
           tar_file="${tag}/shellcheck-${tag}.linux.x86_64.tar.xz"; \
           wget "${url_base}/${tar_file}" -O - | tar xJf -; \
-          mv "shellcheck-${tag}/shellcheck" /bin/; \
-          rm -rf "shellcheck-${tag}"; \
-          ls -laF /bin/shellcheck
+          sudo mv "shellcheck-${tag}/shellcheck" /bin/
       - run: ci/shellcheck.sh
         env:
           CI_PROJECT_DIR: ${{ github.workspace }}
