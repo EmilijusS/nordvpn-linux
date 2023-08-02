@@ -2,7 +2,7 @@
 
 ![icon](./assets/icon.svg)
 
----asdasd
+---asdasdasd
 
 The [NordVPN](https://nordvpn.com/features/) Linux application provides a simple and user-friendly command line interface for accessing all the different features of NordVPN.
 Users can choose from a list of server locations around the world, or let the application automatically select the best server for them.
