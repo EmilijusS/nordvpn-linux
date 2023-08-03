@@ -13,10 +13,15 @@ on:
 permissions: {}
 jobs:
   trigger-gitlab-pipeline:
-    runs-on: [self-hosted, nordvpn-linux]
+    runs-on: ubuntu-22.04
     if: |
       github.event_name == 'push' ||
       (github.event_name == 'pull_request_target' && contains(github.event.pull_request.labels.*.name, 'gitlab')) ||
       (github.event_name == 'workflow_run' && github.event.pull_request.head.repo.full_name == github.repository)
     steps:
       - run: echo "success"
+  debug:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: echo ${{github.event.pull_request.head.repo.full_name}}; echo ${{github.repository}}
+    
