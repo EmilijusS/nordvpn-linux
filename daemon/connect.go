@@ -15,9 +15,7 @@ import (
 )
 
 type ConnectEvent struct {
-	Code    int64
-	Message string
-}
+	Cod
 
 func Connect(
 	events chan ConnectEvent,
